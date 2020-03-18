@@ -1,0 +1,101 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid Name="grid1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="62*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="box" Grid.Column="2" SelectionChanged="box_SelectionChanged"/>
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="61*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Imię"/>
+                <TextBox Name="name1" Grid.Column="1" Text="Wprowadź imię" LostFocus="name1_LostFocus" GotFocus="name1_GotFocus"/>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Nazwisko"/>
+                <TextBox Name="name2" Grid.Column="1" Text="Wprowadź nazwisko" LostFocus="name1_LostFocus" GotFocus="name2_GotFocus"/>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Wiek"/>
+                <ComboBox Name="age" Grid.Column="1"/>
+            </Grid>
+
+            <Grid Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Waga"/>
+                <Label Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Padding="0" Name="weight"/>
+                <Label Grid.Column="3" Content="kg" HorizontalContentAlignment="Left"/>
+                <Slider Grid.Column="1" IsSnapToTickEnabled="True" TickFrequency="1" Name="weight_slider" VerticalAlignment="Center" Minimum="55" Maximum="100" Value="55" ValueChanged="weight_slider_ValueChanged" />
+            </Grid>
+
+            <Grid Grid.Row="9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="59*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Name="add" Grid.Row="0" Content="Dodaj" Click="add_Click"/>
+                    <Button Name="remove" Grid.Row="2" Content="Usuń" Click="remove_Click"/>
+                    <Button Name="mod" Grid.Row="4" Content="Modyfikuj" Click="mod_Click"/>
+                </Grid> 
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
