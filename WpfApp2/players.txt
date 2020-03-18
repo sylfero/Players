@@ -1,0 +1,4 @@
+Cristiano;Ronaldo;35;83
+Lionel;Messi;32;72
+Robert;Lewandowski;31;80
+Erling;Haaland;19;87
