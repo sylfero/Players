@@ -29,47 +29,23 @@ namespace WpfApp2
 
         public string FirstName
         {
-            get
-            {
-                return _firstName;
-            }
-            set
-            {
-                _firstName = value;
-            }
+            get => _firstName;
+            set => _firstName = value;
         }
         public string SecondName
         {
-            get
-            {
-                return _secondName;
-            }
-            set
-            {
-                _secondName = value;
-            }
+            get => _secondName;
+            set => _secondName = value;
         }
         public int Age
         {
-            get
-            {
-                return _age;
-            }
-            set
-            {
-                _age = value;
-            }
+            get => _age;
+            set => _age = value;
         }
         public int Weight
         {
-            get
-            {
-                return _weight;
-            }
-            set
-            {
-                _weight = value;
-            }
+            get => _weight;
+            set => _weight = value;
         }
     }
 }
