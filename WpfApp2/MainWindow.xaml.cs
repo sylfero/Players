@@ -31,6 +31,7 @@ namespace WpfApp2
             AgeRange();
             LoadList();
         }
+        
         private void LoadList()
         {
             List<string> players = File.ReadAllLines("players.txt", Encoding.Default).ToList();
@@ -67,9 +68,11 @@ namespace WpfApp2
                 textbox.Foreground = Brushes.Black;
                 gotFocused1 = true;
             }
+            textbox.BorderThickness = new Thickness(2);
+            textbox.BorderBrush = Brushes.Black;
         }
 
-        private void name1_LostFocus(object sender, RoutedEventArgs e)
+        private void box_LostFocus(object sender, RoutedEventArgs e)
         {
             TextBox textbox = (TextBox)sender;
             if (textbox.Text.Length == 0)
@@ -95,6 +98,8 @@ namespace WpfApp2
                 textbox.Foreground = Brushes.Black;
                 gotFocused2 = true;
             }
+            textbox.BorderThickness = new Thickness(2);
+            textbox.BorderBrush = Brushes.Black;
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
@@ -141,6 +146,10 @@ namespace WpfApp2
                 weight_slider.Value = playerList[listbox.SelectedIndex].Weight;
                 gotFocused1 = true;
                 gotFocused2 = true;
+                name1.BorderBrush = Brushes.LightGray;
+                name1.BorderThickness = new Thickness(1);
+                name2.BorderBrush = Brushes.LightGray;
+                name2.BorderThickness = new Thickness(1);
             }
         }
 
@@ -151,13 +160,16 @@ namespace WpfApp2
             name2.Text = "Wprowadź nazwisko";
             name1.Foreground = Brushes.LightGray;
             name2.Foreground = Brushes.LightGray;
+            name1.BorderBrush = Brushes.LightGray;
+            name2.BorderBrush = Brushes.LightGray;
+            name1.BorderThickness = new Thickness(1);
+            name2.BorderThickness = new Thickness(1);
             age.SelectedItem = 15;
             age.Text = "15";
             weight_slider.Value = 55;
             gotFocused1 = false;
             gotFocused2 = false;
             box.UnselectAll();
-            grid1.Focus();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

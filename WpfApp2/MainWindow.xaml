@@ -35,8 +35,8 @@
                     <ColumnDefinition Width="7*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Content="Imię"/>
-                <TextBox Name="name1" Grid.Column="1" Text="Wprowadź imię" LostFocus="name1_LostFocus" GotFocus="name1_GotFocus"/>
+                <Label Grid.Column="0" Content="Imię" VerticalContentAlignment="Center"/>
+                <TextBox Name="name1" Grid.Column="1" Text="Wprowadź imię" LostFocus="box_LostFocus" GotFocus="name1_GotFocus"/>
             </Grid>
 
             <Grid Grid.Row="3">
@@ -45,8 +45,8 @@
                     <ColumnDefinition Width="7*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Content="Nazwisko"/>
-                <TextBox Name="name2" Grid.Column="1" Text="Wprowadź nazwisko" LostFocus="name1_LostFocus" GotFocus="name2_GotFocus"/>
+                <Label Grid.Column="0" Content="Nazwisko" VerticalContentAlignment="Center"/>
+                <TextBox Name="name2" Grid.Column="1" Text="Wprowadź nazwisko" LostFocus="box_LostFocus" GotFocus="name2_GotFocus"/>
             </Grid>
 
             <Grid Grid.Row="5">
@@ -56,8 +56,8 @@
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Content="Wiek"/>
-                <ComboBox Name="age" Grid.Column="1"/>
+                <Label Grid.Column="0" Content="Wiek" VerticalContentAlignment="Center"/>
+                <ComboBox Name="age" Grid.Column="1" VerticalContentAlignment="Center"/>
             </Grid>
 
             <Grid Grid.Row="7">
@@ -68,9 +68,9 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Content="Waga"/>
+                <Label Grid.Column="0" Content="Waga" VerticalContentAlignment="Center"/>
                 <Label Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Padding="0" Name="weight"/>
-                <Label Grid.Column="3" Content="kg" HorizontalContentAlignment="Left"/>
+                <Label Grid.Column="3" Content="kg" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
                 <Slider Grid.Column="1" IsSnapToTickEnabled="True" TickFrequency="1" Name="weight_slider" VerticalAlignment="Center" Minimum="55" Maximum="100" Value="55" ValueChanged="weight_slider_ValueChanged" />
             </Grid>
 
